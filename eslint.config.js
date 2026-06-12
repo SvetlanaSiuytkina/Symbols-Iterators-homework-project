@@ -1,7 +1,6 @@
 import js from '@eslint/js';
 import globals from 'globals';
 import { defineConfig } from 'eslint/config';
-import jest from 'eslint-plugin-jest';
 
 export default defineConfig([
   js.configs.recommended,
@@ -14,7 +13,6 @@ export default defineConfig([
         ...globals.jest
       }
     },
-    plugins: {jest},
     rules: {
       'semi': ['error', 'always'],
       'quotes': ['error', 'single'],
@@ -26,10 +24,6 @@ export default defineConfig([
       'eol-last': ['error', 'always'],
       'indent': ['error', 2],
       'space-infix-ops': 'error',
-      
-      'jest/no-disabled-tests': 'warn',
-      'jest/no-focused-tests': 'error',
-      'jest/no-identical-title': 'error'
     },
   },
 ]);
